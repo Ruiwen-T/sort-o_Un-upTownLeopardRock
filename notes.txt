@@ -1,0 +1,48 @@
+Un-upTown Leopard Rock: Lea Kwok, Raven (Ruiwen) Tang
+APCS pd07
+Lab04 -- Never Fear, Big O is Here! / time complexity of various sorts
+2022-01-10
+time spent: 01.5 hr
+collaborated with TLP in class
+
+/*
+DISCO
+- In a less vanilla version of bubble sort, a break in the loop could be implemented by using a counter variable to track the number of swaps completed in each pass. If this counter was equal to 0 by the end of the pass, the sort would be completed. We originally included this implementation in our bubble sort algorithm but commented it out after reviewing the posted code and concluding that it would affect the runtimes of the best and worst cases.
+- A comparison takes O(1) time, and a swap takes O(1) time.
+- For both bubble and selection sorts, the best and worst cases have the same time complexity (meaning that the best case is only better in terms of the constant multiplied to the time complexity and is not significantly better in really large cases). However, because insertion sort has a possible break in the loop if an element cannot be "walked" anymore, the time complexities of the best and worst cases are different.
+
+QCC
+- How would one prove or explain why a procedure takes O(1) time? Is graphing the best method or a valid method?
+- We were thinking that selection sort takes the same amount of time (even the coefficients) in any case, but we weren't sure.
+- 
+
+BUB-QA
+ * q0: If a pass requires no swaps, what do you know?
+ * a0: The Array is sorted.
+ * q1: After pass p, what do you know?
+ * a1: The first p elements are in their final positions and you don't need to compare them again.
+ * q2: How many passes are necessary to completely sort?
+ * a2: The number of elements - 1 passes
+ 
+SEL-QA
+ * q0: How many passes to sort n elements?
+ * a0: n-1 passes
+ * q1: What do you know after pass p?
+ * a1: The greatest p elements have been found and placed in their rightful position. There are p less elements to include in the next passes.
+ * q2: How do you know if sorted?
+ * a2: Completed n-1 passes on n elements
+ * q3: What does a pass boil down to?
+ * a3: Finding the greatest element within a window and swapping it with the element at the end of the window
+ 
+INS-QA
+ * q0: How many passes to sort n elements?
+ * a0: n-1 passes
+ * q1: What do you know after pass p?
+ * a1: The first p+1 elements are sorted up to the partition, but they are not necessarily in their final positions
+ * q2: How will you know when sorted?
+ * a2: When n-1 passes have been made and the partition is n
+ * q3: What constitutes a pass?
+ * a3: A pass constitutes walking down the leftmost unsorted element to its position in the sorted portion
+ * q4: What must you track?
+ * a4: Partition
+*/
