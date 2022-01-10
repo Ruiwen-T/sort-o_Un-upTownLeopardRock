@@ -2,7 +2,7 @@
 
 ## Bubble Sort
 ### Best Case:
-Already sorted ArrayList
+Already sorted ArrayList ... because no swaps will be made during any of the n-1 passes, where n is the number of elements in the ArrayList.
 ### Worst Case:
 ArrayList with elements in greatest to least order
 
