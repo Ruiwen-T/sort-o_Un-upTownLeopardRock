@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Sorts{
   //~~~~~~~~~~~~~~~~~~~ HELPER METHODS ~~~~~~~~~~~~~~~~~~~
   //precond:  lo < hi && size > 0
@@ -79,7 +81,7 @@ public class Sorts{
     int maxPos;
 
     for( int pass = data.size()-1; pass > -1; pass--   ) {
-      System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
+      //System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
 
         maxPos = pass;
       
@@ -88,13 +90,13 @@ public class Sorts{
       		maxPos = j;
       	}
         
-        System.out.println( "maxPos: " + maxPos );//diag
-        System.out.println( data );//diag
+        //System.out.println( "maxPos: " + maxPos );//diag
+        //System.out.println( data );//diag
 
       }
 
       data.set(pass, data.set( maxPos, data.get(pass) ) );
-      System.out.println( "after swap: " +  data );//diag
+      //System.out.println( "after swap: " +  data );//diag
     }
 
   }//end selectionSort
@@ -127,8 +129,8 @@ public class Sorts{
     for( int partition = 1; partition < data.size() ; partition++) {
       //partition marks first item in unsorted region
 
-      System.out.println( "\npartition: " + partition + "\tdataset:"); //diag
-      System.out.println( data );
+      //System.out.println( "\npartition: " + partition + "\tdataset:"); //diag
+      //System.out.println( data );
 
       //traverse sorted region from right to left
       for( int i = partition; i > 0; i-- ) {
@@ -137,7 +139,7 @@ public class Sorts{
         // by swapping adjacent items
         if ( data.get(i-1).compareTo(data.get(i)) > 0 ) {
 
-          System.out.println( "swap indices "+(i-1)+" & "+i+"..." ); //diag
+          //System.out.println( "swap indices "+(i-1)+" & "+i+"..." ); //diag
           data.set(i-1, data.set( i, data.get(i-1) ) );
         }
         else
