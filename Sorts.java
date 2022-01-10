@@ -44,9 +44,9 @@ public class Sorts{
             }
         }
         // System.out.println("Number of swaps in this pass: " + swaps);
-        if (swaps == 0){
-            return;
-        }
+        // if (swaps == 0){
+            // return;
+        // }
     }
   }
 
