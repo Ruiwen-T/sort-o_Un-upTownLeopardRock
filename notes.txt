@@ -14,7 +14,7 @@ DISCO
 QCC
 - How would one prove or explain why a procedure takes O(1) time? Is graphing the best method or a valid method?
 - We were thinking that selection sort takes the same amount of time (even the coefficients) in any case, but we weren't sure.
-- 
+- We think that k is equal to f(n) over g(n) because it has to be a constant. It also checks that the degree of the two functions is the same, which we know is very important for time complexity. O(1) or O(constant) is less than O(n). Is this correct?
 
 BUB-QA
  * q0: If a pass requires no swaps, what do you know?
